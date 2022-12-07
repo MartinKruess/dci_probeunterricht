@@ -1,0 +1,17 @@
+// My Mixins
+
+@mixin border{
+    border: solid 2px red;
+    border-radius: 1rem;
+  }
+
+  @mixin flex{
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+  }
+
+  @mixin spacer{
+    margin: var(--smallspace-CSS);
+    padding: var(--mediumspace-CSS);
+  }

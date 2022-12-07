@@ -1,0 +1,52 @@
+:root {
+  font-size: 62.5%;
+  --primary-CSS: #242628;
+  --secondary-CSS: #ededed;
+  --highlight-CSS: #5b00aa;
+  --smallspace-CSS: 0.5rem;
+  --mediumspace-CSS: 1rem;
+  --largespace-CSS: 1.5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #777;
+  font-size: 1.6rem;
+}
+body main section {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  width: 80%;
+  height: 90vh;
+  margin: var(--largespace-CSS) auto;
+  padding: var(--smallspace-CSS);
+  border: solid 1px;
+}
+body main section button {
+  border: solid 2px red;
+  border-radius: 1rem;
+  margin: var(--smallspace-CSS);
+  padding: var(--mediumspace-CSS);
+  width: 48%;
+  font-size: 3rem;
+  font-weight: 600;
+  border: solid;
+}
+body main section .btn_dark {
+  background-color: var(--primary-CSS);
+  color: var(--secondary-CSS);
+}
+body main section .btn_light {
+  background-color: var(--secondary-CSS);
+  color: var(--primary-CSS);
+}
+body main section p {
+  margin: var(--smallspace-CSS);
+  padding: var(--mediumspace-CSS);
+}/*# sourceMappingURL=main.css.map */
