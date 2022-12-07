@@ -1,4 +1,4 @@
-# Basic infos about SCSS/SASS ?
+# Grundwissen über SCSS/SASS ?
 
 SCSS kann als erweitertes CSS beschrieben werden, womit das Aussehen von Websites beeinflusst wird. Ein mit SCSS verwandter Begriff ist SASS. Während die ***SASS-Syntax*** mit ***Einrückungen*** und ohne die im CSS üblichen geschweiften Klammern und Semikolons auskommt, ist die Syntax von SCSS der von CSS ähnlich. SCSS wird gerne als die modernere Syntax bezeichnet.
 

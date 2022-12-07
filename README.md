@@ -1,4 +1,4 @@
-# Basic infos about SCSS/SASS ?
+# Basic information about SCSS/SASS ?
 SCSS can be described as advanced CSS, which is used to affect the look of websites. A term related to SCSS is SASS. While the ***SASS syntax*** gets by with ***indentation*** and without the curly brackets and semicolons common in CSS, the syntax of SCSS is similar to that of CSS. SCSS is often referred to as the more modern syntax.
 
 In order for SASS to be understood by a browser, the code must first be converted to CSS. That's why SASS is called a ***preprocessor***.
