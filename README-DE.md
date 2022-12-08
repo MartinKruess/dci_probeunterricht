@@ -93,7 +93,7 @@ Im gegensatz zu Variablen, die global arbeiten sind Mixins eine Art vordefiniert
   }
 ```
 
-
+---
 
 ## Wie funktioniert es mit SCSS/SASS ?
 
@@ -145,9 +145,17 @@ Partials sind Dateien, die vom Compiler ignoriert werden, bis diese in eine Comp
 
 ```
 @mixin border{
-    border: solid 2px red;
+    border: solid 0.2rem $highlight-SCSS;
     border-radius: 1rem;
   }
+
+// Dynamic borders by setting parameters
+@mixin borderWithParameters($width: 0.5rem, $color: $highlight-SCSS){
+  border-width: $width;
+  border-style: solid;
+  border-color: $color;
+  border-radius: 5rem;
+}
 ```
 
 ```
@@ -158,7 +166,20 @@ Nutze die globalen Variablen um padding und margin zu setzen.
 
 7. Nun versuche das fertige Mixin nach ***_mixin.scss*** auszulagern und importiere das Mixin in die *main.scss*.
 
+8. Erstelle ein media querry mixin.
 
+```
+@mixin breakpoints ($medium) {
+    @if $medium == desktop {
+      @media (min-width: 1024px) {
+        @content;
+      }
+    }
+  ...
+  }
+```
+
+---
 
 Quellen:
 

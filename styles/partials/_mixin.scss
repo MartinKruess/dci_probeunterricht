@@ -5,26 +5,26 @@
     border-radius: 1rem;
   }
 
-  // Dynamic borders by setting parameters
-  @mixin borderWithParameters($width: 0.5rem, $color: $highlight-SCSS){
-    border-width: $width;
-    border-style: solid;
-    border-color: $color;
-    border-radius: 5rem;
-  }
+// Dynamic borders by setting parameters
+@mixin borderWithParameters($width: 0.5rem, $color: $highlight-SCSS){
+  border-width: $width;
+  border-style: solid;
+  border-color: $color;
+  border-radius: 5rem;
+}
 
-  @mixin flex{
-    display: flex;
-    display: -webkit-flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    flex-direction: column;
-  }
+@mixin flex{
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: column;
+}
 
-  @mixin spacer{
-    margin: var(--mediumspace-CSS) 0;
-    padding: var(--mediumspace-CSS);
-  }
+@mixin spacer{
+  margin: var(--mediumspace-CSS) 0;
+  padding: var(--mediumspace-CSS);
+}
 
   // Media Breakpoints
   @mixin breakpoints ($medium) {
