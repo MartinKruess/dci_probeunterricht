@@ -6,21 +6,23 @@
     font-size: 62.5%;
 
     // CSS Variables
-    --primary-CSS: #242628;
+    --primary-CSS: #08061c;
     --secondary-CSS: #ededed;
-    --highlight-CSS: #5b00aa;
+    --third-CSS: #7a0202;
+    --highlight-CSS: #d15305;
     --smallspace-CSS: 0.5rem;
     --mediumspace-CSS: 1rem;
     --largespace-CSS: 1.5rem;
-
-    // SCSS Variables
-    $primary-SCSS: #242628;
-    $secondary-SCSS: #ededed;
-    $highlight-SCSS: #5b00aa;
-    $smallspace-SCSS: 0.5rem;
-    $mediumspace-SCSS: 1rem;
-    $largespace-SCSS: 1.5rem;
 }
+
+// SCSS Variables
+$primary-SCSS: #08061c;
+$secondary-SCSS: #ededed;
+$third-SCSS: #7a0202;
+$highlight-SCSS: #d15305;
+$smallspace-SCSS: 0.5rem;
+$mediumspace-SCSS: 1rem;
+$largespace-SCSS: 1.5rem;
 
 *{
     margin: 0;
@@ -31,45 +33,90 @@
 // Mixin Logic
   @import "./partials/mixin";
 
-  
-
 // Styles
 
 body{
-    background-color: #777;
-    font-size: 1.6rem; // 16px
+    background-color: $primary-SCSS;
+    color: $secondary-SCSS;
+    font-size: 2rem; // 16px
     main{
         section{
             @include flex;
-            width: 80%;
-            height: 90vh;
-            margin: var(--largespace-CSS) auto;
-            padding: var(--smallspace-CSS);
+            @include breakpoints(desktop) {
+                width: 80%;
+                height: 90vh;
+                flex-direction: row;
+
+                button{
+                    max-width: 48%;
+                }
+
+                span{
+
+                    img{
+                        max-width: 30rem;
+                    }
+                }
+            }
+            @include breakpoints(tablet) {
+                width: 88%;
+                height: row;
+                flex-direction: row;
+
+                button{
+                    max-width: 46%;
+                }
+
+                span{
+
+                    img{
+                        max-width: 40rem;
+                    }
+                }
+            }
+            @include breakpoints(mobile){
+                width: 96%;
+                height: auto;
+                flex-direction: column;
+                font-size: 1.6rem;
+
+            }
+            
+            margin: $largespace-SCSS auto;
+            padding: $largespace-SCSS;
             border: solid 1px;
         
             button{
                 @include border;
                 @include spacer;
-                width: 48%;
+                background-color: $third-SCSS;
+                width: 96%;
+                height: 10rem;
                 font-size: 3rem;
                 font-weight: 600;
-                border: solid;
             }
 
-            .btn_dark{
-                background-color: var(--primary-CSS);
+            .btn_01{
+                
                 color: var(--secondary-CSS);
             }
 
-            .btn_light{
-                background-color: var(--secondary-CSS);
-                color: var(--primary-CSS);
-            //   background-color: $secondary-SCSS;
-            //   color: $primary-SCSS;
+            .btn_02{
+               @include borderWithParameters( 0.2rem );
+               background-color: $third-SCSS;
+               color: $primary-SCSS;
             }
 
-            p{
+            span{
                 @include spacer;
+                width: 90%;
+
+                
+                img{
+                    width: 100%;
+                    float: left;
+                    padding: $smallspace-SCSS $largespace-SCSS;
+                }
             }
           }
     }

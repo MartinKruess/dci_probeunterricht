@@ -1,17 +1,46 @@
 // My Mixins
 
 @mixin border{
-    border: solid 2px red;
+    border: solid 0.2rem $highlight-SCSS;
     border-radius: 1rem;
+  }
+
+  // Dynamic borders by setting parameters
+  @mixin borderWithParameters($width: 0.5rem, $color: $highlight-SCSS){
+    border-width: $width;
+    border-style: solid;
+    border-color: $color;
+    border-radius: 5rem;
   }
 
   @mixin flex{
     display: flex;
     display: -webkit-flex;
     flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: column;
   }
 
   @mixin spacer{
-    margin: var(--smallspace-CSS);
+    margin: var(--mediumspace-CSS) 0;
     padding: var(--mediumspace-CSS);
+  }
+
+  // Media Breakpoints
+  @mixin breakpoints ($medium) {
+    @if $medium == desktop {
+      @media (min-width: 1024px) {
+        @content;
+      }
+    }
+    @else if $medium == tablet {
+      @media (min-width: 601px) and (max-width: 1023px) {
+        @content;
+      }
+    }
+    @else if $medium == mobile {
+      @media (max-width: 600px) {
+        @content;
+      }
+    }
   }

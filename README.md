@@ -121,12 +121,22 @@ In contrast to variables, which work globally, mixins are a kind of predefined a
 4. We create global variables
 ```
 //CSS
---primary-color: #ededed; //bg-color
---secondary-color: #242628; //font color
+--primary-CSS: #08061c;
+  --secondary-CSS: #ededed;
+  --third-CSS: #7a0202;
+  --highlight-CSS: #d15305;
+  --smallspace-CSS: 0.5rem;
+  --mediumspace-CSS: 1rem;
+  --largespace-CSS: 1.5rem;
 
 //SCSS
-$primary-color: #ededed; //bg-color
-$secondary-color: #242628; //font color
+  $primary-SCSS: #08061c;
+  $secondary-SCSS: #ededed;
+  $third-SCSS: #7a0202;
+  $highlight-SCSS: #d15305;
+  $smallspace-SCSS: 0.5rem;
+  $mediumspace-SCSS: 1rem;
+  $largespace-SCSS: 1.5rem;
 ```
 5. What are partials and how are they used?
 Partials are files that are ignored by the compiler until they are imported into a compilable file.
