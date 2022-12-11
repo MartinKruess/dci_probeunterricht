@@ -117,6 +117,7 @@ Im gegensatz zu Variablen, die global arbeiten sind Mixins eine Art vordefiniert
     flex-wrap: wrap;
   }
 ```
+---
 
 4. Wir erstellen globale Variablen
 ```
@@ -138,11 +139,18 @@ Im gegensatz zu Variablen, die global arbeiten sind Mixins eine Art vordefiniert
   $mediumspace-SCSS: 1rem;
   $largespace-SCSS: 1.5rem;
 ```
+---
 5. Was sind Partials und wie werden diese genutzt?
 Partials sind Dateien, die vom Compiler ignoriert werden, bis diese in eine CompolierbareDatei importiert werden.
 **Wichtig:** Um das Compelieren von Partials zu verhindern benötgt man einen Präfix vor dem eigentlihen Dateinamen. *_name* durch den *_* wird diei Datei ignoriert.
 
 
+```
+@import "./partials/mixin";
+```
+
+---
+6. Wir geben den Buttons eine allgemeine Border, wobei wir bei Button 2 die allgemeine durch eine dynamische Border ersetzen.
 ```
 @mixin border{
     border: solid 0.2rem $highlight-SCSS;
@@ -157,27 +165,24 @@ Partials sind Dateien, die vom Compiler ignoriert werden, bis diese in eine Comp
   border-radius: 5rem;
 }
 ```
-
-```
-@import "./partials/mixin";
-```
-6. Style die Buttons und den Paragraphen mit Hilfe eines Mixins innerhalb der ***main.scss***.
+---
+7. Style die Buttons und den Paragraphen mit Hilfe eines Mixins innerhalb der ***main.scss***.
 Nutze die globalen Variablen um padding und margin zu setzen.
 
-7. Nun versuche das fertige Mixin nach ***_mixin.scss*** auszulagern und importiere das Mixin in die *main.scss*.
+8. Nun versuche das fertige Mixin nach ***_mixin.scss*** auszulagern und importiere das Mixin in die *main.scss*.
 
-8. Erstelle ein media querry mixin.
+9. Erstelle ein media querry mixin. (Challange)
+
+---
+Seit einigen jahren gibt es immer mehr Hilfsmittel um das erstellen dynamischer Webseiten zu vereinfachen. Natürlich sind diese kein Ersatz für media querrys, dennoch vereinfachen sie vieles.
 
 ```
-@mixin breakpoints ($medium) {
-    @if $medium == desktop {
-      @media (min-width: 1024px) {
-        @content;
-      }
-    }
-  ...
-  }
+.element {
+   font-size: clamp(1rem, 2.5vw, 2rem);
+}
 ```
+
+https://kulturbanause.de/blog/min-max-und-clamp-drei-css-funktionen-fuer-dynamischere-websites/
 
 ---
 

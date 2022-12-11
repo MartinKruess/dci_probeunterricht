@@ -142,6 +142,13 @@ In contrast to variables, which work globally, mixins are a kind of predefined a
 Partials are files that are ignored by the compiler until they are imported into a compilable file.
 **Important:** To prevent partials from being compiled, you need a prefix before the actual file name. *_name* with the *_* the file is ignored.
 
+```
+@import "./partials/mixin";
+```
+
+---
+
+6. We give the buttons a general border, replacing the general border with a dynamic border for button 2.
 
 ```
 @mixin border{
@@ -157,28 +164,26 @@ Partials are files that are ignored by the compiler until they are imported into
   border-radius: 5rem;
 }
 ```
+---
 
-```
-@import "./partials/mixin";
-```
-6. Style the buttons and the paragraph using a mixin within the ***main.scss***.
+7. Style the buttons and the paragraph using a mixin within the ***main.scss***.
 Use global variables to set padding and margin.
 
-7. Now try to store the finished mixin in ***_mixin.scss*** and import the mixin into *main.scss*.
+8. Now try to store the finished mixin in ***_mixin.scss*** and import the mixin into *main.scss*.
 
-8. Create a media querry mixin.
+
+9. Create a media querry mixin. (Challange)
+
+---
+For several years there have been more and more tools to simplify the creation of dynamic websites. Of course, these are not a replacement for media queries, but they simplify a lot.
 
 ```
-@mixin breakpoints ($medium) {
-    @if $medium == desktop {
-      @media (min-width: 1024px) {
-        @content;
-      }
-    }
-  ...
-  }
+.element {
+   font-size: clamp(1rem, 2.5vw, 2rem);
+}
 ```
 
+https://kulturbanause.de/blog/min-max-und-clamp-drei-css-funktionen-fuer-dynamischere-websites/
 
 ---
 
